@@ -1,0 +1,80 @@
+/*const char ResponseHeader[] =
+	"HTTP/1.1 200 OK\r\n"
+	"Date: Thu, 22 Feb 2018 09 : 02 : 54 GMT\r\n"
+	"Expires: -1\r\n"
+	"Cache-Control: private, max - age = 0\r\n"
+	"Content-Type: text / html; charset = ISO - 8859 - 2\r\n"
+	"P3P: CP = \"This is not a P3P policy! See g.co/p3phelp for more info.\"\r\n"
+	"Server: gws\r\n"
+	"X-XSS-Protection: 1; mode = block\r\n"
+	"X-Frame-Options: SAMEORIGIN\r\n"
+	"Set-Cookie: 1P_JAR = 2018 - 02 - 22 - 09; expires = Sat, 24 - Mar - 2018 09:02 : 54 GMT; path = / ; domain = .google.pl\r\n"
+	"Set-Cookie: NID = 124 = jrfIoqkQJOG63tKO4BL6bLVJAhzkxZStvV2QFHSSRsdTxJo5rDdt605KRVoYsWoKNRPYYzVPLoSouz - lDmD9hMYtNixlKh7fjo7aubhVxuKoYqIHn_dsyLzbVIaKU8YO; expires = Fri, 24 - Aug - 2018 09:02 : 54 GMT; path = / ; domain = .google.pl; HttpOnly\r\n"
+	"Accept-Ranges: none\r\n"
+	"Vary: Accept - Encoding\r\n"
+	"Transfer-Encoding: chunked\r\n\r\n";*/
+
+/*const char ResponseHeader[] =
+"HTTP/1.1 200 OK\r\n"
+"Date: Thu, 22 Feb 2018 13:52:09 GMT\r\n"
+"Expires: -1\r\n"
+"Cache-Control: private, max-age=0\r\n"
+"Content-Type: text/html; charset=ISO-8859-2\r\n"
+"P3P: CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"\r\n"
+"Server: gws\r\n"
+"X-XSS-Protection: 1; mode=block\r\n"
+"X-Frame-Options: SAMEORIGIN\r\n"
+"Set-Cookie: 1P_JAR=2018-02-22-13; expires=Sat, 24-Mar-2018 13:52:09 GMT; path=/; domain=.google.pl\r\n"
+"Set-Cookie: NID=124=W7W-lniCHqP5Q8y-sylQ4puzeL_u6SahFrcSsPGSgwguCPTw2XJb2IgIhc7GvqBBfy_37OyTzF2TShbZkcAR4THOJCPQQC3Co_MQtnx66oWG19C_9U_VS337BPbN_rIC; expires=Fri, 24-Aug-2018 13:52:09 GMT; path=/; domain=.google.pl; HttpOnly\r\n"
+"Accept-Ranges: none\r\n"
+"Vary: Accept-Encoding\r\n"
+"Transfer-Encoding: chunked\r\n\r\n";*/
+
+///////////////////////////////////////////////////////////////////////////////
+//static std::fstream* htmlFile = nullptr;
+
+///////////////////////////////////////////////////////////////////////////////
+/*void SendChunkedTransfer(SOCKET soc, size_t chunkSize) {
+	char* data = new char[chunkSize];
+	char chunkSizeHex[32];
+
+	if (!data) {
+		LOG(("Could not create buffer"));
+		return;
+	}
+	using namespace std;
+	// Seek file to the beginning.
+	htmlFile->clear();
+	htmlFile->seekg(0, std::ios::beg);
+
+	while (!htmlFile->eof()) {
+		htmlFile->read(data, chunkSize);
+		std::streamsize s= htmlFile->gcount();
+		sprintf_s(chunkSizeHex, "%.X\r\n", s);
+		// Send chunk size: size\r\nChunk\r\n.
+		send(soc, chunkSizeHex, strlen(chunkSizeHex), 0);
+		send(soc, data, s, 0);
+		send(soc, "\r\n", 2, 0);
+	}
+
+	// Send ending chunk.
+	send(soc, "0\r\n\r\n", 5, 0);
+
+	LOG(("Transfer complete"));
+}*/
+
+/*const char resp2[] = "HTTP/1.1 200 OK\r\n"
+"Date: Thu, 22 Feb 2018 13:52:09 GMT\r\n"
+"Expires: -1\r\n"
+"Cache-Control: private, max-age=0\r\n"
+"Content-Type: text/html; charset=ISO-8859-2\r\n"
+"P3P: CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"\r\n"
+"Server: gws\r\n"
+"X-XSS-Protection: 1; mode=block\r\n"
+"X-Frame-Options: SAMEORIGIN\r\n"
+"Set-Cookie: 1P_JAR=2018-02-22-13; expires=Sat, 24-Mar-2018 13:52:09 GMT; path=/; domain=.google.pl\r\n"
+"Set-Cookie: NID=124=W7W-lniCHqP5Q8y-sylQ4puzeL_u6SahFrcSsPGSgwguCPTw2XJb2IgIhc7GvqBBfy_37OyTzF2TShbZkcAR4THOJCPQQC3Co_MQtnx66oWG19C_9U_VS337BPbN_rIC; expires=Fri, 24-Aug-2018 13:52:09 GMT; path=/; domain=.google.pl; HttpOnly\r\n"
+"Accept-Ranges: none\r\n"
+"Vary: Accept-Encoding\r\n"
+"Transfer-Encoding: chunked\r\n\r\n"
+"20\r\n{\"http_code\":200,\"error_code\":0}\r\n0\r\n\r\n";*/
