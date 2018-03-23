@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcpEchoServer", "TcpEchoServer\TcpEchoServer.vcxproj", "{63225F11-3F3A-4BB7-A4D8-3709D6AE1532}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EchoTester", "EchoTester\EchoTester.vcxproj", "{E4DDCD2C-03CC-4093-B2DD-C0516309929F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{63225F11-3F3A-4BB7-A4D8-3709D6AE1532}.Release|x64.Build.0 = Release|x64
 		{63225F11-3F3A-4BB7-A4D8-3709D6AE1532}.Release|x86.ActiveCfg = Release|Win32
 		{63225F11-3F3A-4BB7-A4D8-3709D6AE1532}.Release|x86.Build.0 = Release|Win32
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Debug|x64.ActiveCfg = Debug|x64
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Debug|x64.Build.0 = Debug|x64
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Debug|x86.ActiveCfg = Debug|Win32
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Debug|x86.Build.0 = Debug|Win32
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Release|x64.ActiveCfg = Release|x64
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Release|x64.Build.0 = Release|x64
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Release|x86.ActiveCfg = Release|Win32
+		{E4DDCD2C-03CC-4093-B2DD-C0516309929F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,7 @@
 #include <string>
 #include <sstream>
 #include <ctime>
+#include <iostream>
 
 ///////////////////////////////////////////////////////////////////////////////
 using std::string;
@@ -121,10 +122,10 @@ bool InitMainSocket(u_short listeningPort) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-void DisplayHelp() {
-	printf("Version: %.01f\n", VERSION);
-	printf("Tool usage:\n");
-	printf("\ttool.exe portNumber\n\n");
+static void DisplayHelp() {
+	Log::Info("Version: %.01f", VERSION);
+    Log::Info("Tool usage:");
+    Log::Info("\ttool.exe portNumber\n");
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -140,7 +141,7 @@ static void NewConnectionHandler(SOCKET socket) {
         char buffer[512];
         Log::Info("Reading data...");
         int recieved = recv(socket, buffer, sizeof(buffer) - 1, 0);
-        if (recieved >= 0) {
+        if (recieved > 0) {
             buffer[recieved] = 0;
             Log::Info("Sending data back...: '%s'", buffer);
             if (send(socket, buffer, recieved, 0) == -1)
@@ -167,10 +168,10 @@ void HandleNewConnection(SOCKET newSocket) {
 ///////////////////////////////////////////////////////////////////////////////
 int main(int argc, char** argv)
 {
-	if (argc < 2) {
-		DisplayHelp();
-		return 0;
-	}
+    if (argc < 2) {
+        DisplayHelp();
+        return 0;
+    }
 
 	InitializeWinSoc();
 	InitMainSocket(atoi(argv[1]));
